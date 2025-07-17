@@ -59,7 +59,7 @@ layout: default
     <!-- About Me Section -->
     <section id="about-me">
       <h2>About Me</h2>
-      <p>I'm a 4th-year undergraduate student at <a href="https://sfsu.edu" target="_blank">San Francisco State University</a>, aspiring to apply to Ph.D. programs. My interests are in artificial intelligence, data science, healthcare, education, and frontend development. I am a Cal Bridge Scholar.</p> <p>During the summer of 2024, I had the opportunity to work under Dr. Yu Zhang, an Assistant Professor in Electrical and Computer Engineering. This experience was invaluable, as it allowed me to immerse myself in the field of data analysis and machine learning, specifically focusing on <a href="https://docs.google.com/presentation/d/16D892MRAqM3MTbQpsdQFwY0wZFAPFKzs47PcMVS2vh4/edit?usp=sharing" target="_blank">load forecasting</a>.</p>
+      <p>I'm a 1st year master candidate at <a href="https://sjsu.edu" target="_blank"> San Jose State University</a>, aspiring to apply to Ph.D. programs. My interests are in artificial intelligence, data science, healthcare, education, and frontend development. I am a Cal Bridge Scholar.</p> <p>During the summer of 2024, I had the opportunity to work under Dr. Yu Zhang, an Assistant Professor in Electrical and Computer Engineering. This experience was invaluable, as it allowed me to immerse myself in the field of data analysis and machine learning, specifically focusing on <a href="https://docs.google.com/presentation/d/16D892MRAqM3MTbQpsdQFwY0wZFAPFKzs47PcMVS2vh4/edit?usp=sharing" target="_blank">load forecasting</a>.</p>
       <p>I think that Artificial Intelligence is the future, whether it be through robotics, data processing, or autonomous cars. AI has the potential to transform nearly every industry, from enhancing operational efficiency to creating entirely new ways for humans to interact with technology. My interest is in the application of AI in healthcare, where it can revolutionize diagnostics, personalize treatment plans, and improve patient outcomes. I am particularly fascinated by how machine learning algorithms can help identify patterns in complex medical data, leading to early detection of diseases and more accurate prognoses. In the long run, I believe that AI-driven healthcare solutions will not only save lives but also make healthcare more accessible and affordable for everyone.
       </p>
     </section>
@@ -73,13 +73,26 @@ layout: default
   </ul>
   </section>
 
-  <!-- Dynamic Research/Project Section -->
-  <section id="projects">
-    <h2>Research & Projects</h2>
-    <div id="project-list">
-      <!-- Project items will be dynamically inserted here -->
+<!-- Dynamic Research/Project Section -->
+<section id="projects">
+  <h2>Research & Projects</h2>
+  
+  <!-- Current Projects Section -->
+  <section id="current-projects">
+    <h3>Current Projects</h3>
+    <div id="current-project-list">
+      <!-- Current project items will be dynamically inserted here -->
     </div>
   </section>
+  
+  <!-- Old Projects Section -->
+  <section id="old-projects">
+    <h3>Old Projects</h3>
+    <div id="old-project-list">
+      <!-- Old project items will be dynamically inserted here -->
+    </div>
+  </section>
+</section>
 
   <!-- Teaching/Mentor Section -->
   <section id="mentor">
@@ -91,16 +104,14 @@ layout: default
   </section>
 
    <!-- Dynamic Awards Section (Commented Out) -->
-
-  <!--
+<!--
   <section id="awards">
     <h2>Awards</h2>
     <ul id="awards-list">
       // Uncomment and add awards data dynamically here if needed
     </ul>
   </section>
-  -->
-
+-->
   <!-- Dynamic Publications Section
   <section id="publications">
     <h2>Publications</h2>
@@ -125,6 +136,14 @@ layout: default
 <script>
   // Sample news data
   const news = [
+    { date: "2025-7-1", content: "Started my 8 weeks research internship at UC Berkeley" },
+    { date: "2025-6-23", content: "Received SFSU official digital diploma" },
+    { date: "2025-5-23", content: "Attended San Francisco State University Commencement" },
+    { date: "2025-4-30", content: "Accepted into San Jose State University Computer Science Master Program with specialization in Artifical Intelligence." },
+    { date: "2025-4-12", content: "Was invited into the prestigious Phi Beta Kappa Honor Society" },
+    { date: "2025-5-08", content: "Inititated and took the Phi Beta Kappa Omicron Chapter oath with a cohort of 10+ other recipicent" },
+    { date: "2025-4-12", content: "Was invited into the prestigious Phi Beta Kappa Honor Society" },
+    { date: "2025-2-7", content: "Started my independent study under Proessor Qun Wang with Dev Modi" },
     { date: "2024-10-20", content: "Attended a 3 days Cal Hacks 11.0, implementing hurricane tracker protype with a team of 2" },
     { date: "2024-9-14", content: "Presented at Cal Bridge 2024 Fall Conference Symporium" },
     { date: "2024-8-16", content: "Presented at UC Santa Cruz for Cal Bridge 2024 Summer Research Internship" },
@@ -147,80 +166,102 @@ layout: default
   });
 
   // Project data
-  const projects = [
-    {
-      title: "Pre-Hurricane Alarm",
-      collaborators: "Krushna Thakkar and Akshar Gothi",
-      description: "Developed during Cal Hacks 11.0, this project serves as an early warning system for hurricanes, integrating real-time data for disaster preparedness.",
-      imageUrl: "/assets/images/hurr_tracker.jpg", // Link to uploaded 'hurr_tracker.jpg'
-      devpost: "https://devpost.com/software/pre-hurricane-alarm",
-      github: "https://github.com/kru2710shna/Pre_Hurricane"
-    },
-    {
-      title: "Load Forecasting Models Comparison",
-      collaborators: "Mentor: Yu Zhang",
-      description: "A comparative analysis of load forecasting models using machine learning techniques.",
-      imageUrl: "/assets/images/lf_ml.png", // Placeholder or relevant image
-      github: "https://github.com/Codingjackking/ML-STLF",
-      presentation: "https://docs.google.com/presentation/d/16D892MRAqM3MTbQpsdQFwY0wZFAPFKzs47PcMVS2vh4/edit?usp=sharing"
-    },
-    {
-      title: "Anaphorna",
-      collaborators: "Anmol Dhaka, Ahmed Yasser, and Awen Li",
-      description: "Created for DavisHacks 2024, this project is designed to provide sustainable solutions for communities affected by environmental issues.",
-      imageUrl: "/assets/images/alz_watch.png", // Link to uploaded 'alz_watch.png'
-      devpost: "https://devpost.com/software/anaphorna",
-      github: "https://github.com/ahmedryasser/Anaphorna"
-    },
-    {
-      title: "Danger Tracker",
-      collaborators: "Evan Teboul, Aymane-Arfaoui Arfaoui, and Vignesh Guruswami",
-      description: "A project for SFHacks 2024 to help monitor and report dangerous incidents in real time, enhancing community safety.",
-      imageUrl: "/assets/images/dan_tracker.jpg", // Link to uploaded 'dan_tracker.jpg'
-      devpost: "https://devpost.com/software/danger-tracker",
-      github: "https://github.com/M-a-a-d-man/SFHacks2024"
-    },
-  ];
+  const currentProjects = [
+  {
+    title: "The Why in the Evolution of Data Visualizations on Wikipedia",
+    collaborators: "Naing Htet, Jasmine Shih, PI: Dr. Marti Hearst",
+    description: "Explored using Gemini and ChatGPT LLM to infer the intent behind wikipedia image edit using wikipedia revision commments",
+    imageUrl: "../assets/images/sucb2025.png", // Replace with the appropriate image
+    // github: "https://github.com/WikiVizEvolution/wiki-viz-edit-intents", // Update with the relevant link if available
+    // presentation: "https://example.com/presentation" // Update with the relevant link if available
+  }
+];
 
-  // Populate the projects section
-  const projectList = document.getElementById("project-list");
-  projects.forEach(project => {
-    const projectDiv = document.createElement("div");
-    projectDiv.classList.add("project");
+const oldProjects = [
+  {
+    title: "Reinforcement Learning for Optimizing Multi-Vaccine Distribution",
+    collaborators: "Naing Htet, Dev Modi, PI: Professor Qun Wang",
+    description: "Implemented a framework that optimized covid-19 and flu distribution.",
+    imageUrl: "../assets/images/csc699.png", // Replace with the appropriate image
+    github: "https://github.com/Codingjackking/MultiVacSim", // Update with the relevant link if available
+    presentation: "https://docs.google.com/presentation/d/1oGpdoPimuHWwMQtScVbWzOm1hZcXs1GRn7JOxB7x9QU/edit?usp=sharing" // Update with the relevant link if available
+  },
+  {
+    title: "Pre-Hurricane Alarm",
+    collaborators: "Krushna Thakkar and Akshar Gothi",
+    description: "Developed during Cal Hacks 11.0, this project serves as an early warning system for hurricanes, integrating real-time data for disaster preparedness.",
+    imageUrl: "../assets/images/hurr_tracker.jpg",
+    devpost: "https://devpost.com/software/pre-hurricane-alarm",
+    github: "https://github.com/kru2710shna/Pre_Hurricane"
+  },
+  {
+    title: "Load Forecasting Models Comparison",
+    collaborators: "Mentor: Yu Zhang",
+    description: "A comparative analysis of load forecasting models using machine learning techniques.",
+    imageUrl: "../assets/images/lf_ml.png",
+    github: "https://github.com/Codingjackking/ML-STLF",
+    presentation: "https://docs.google.com/presentation/d/16D892MRAqM3MTbQpsdQFwY0wZFAPFKzs47PcMVS2vh4/edit?usp=sharing"
+  },
+  {
+    title: "Anaphorna",
+    collaborators: "Anmol Dhaka, Ahmed Yasser, and Awen Li",
+    description: "Created for DavisHacks 2024, this project is designed to provide sustainable solutions for communities affected by environmental issues.",
+    imageUrl: "../assets/images/alz_watch.png",
+    devpost: "https://devpost.com/software/anaphorna",
+    github: "https://github.com/ahmedryasser/Anaphorna"
+  },
+  {
+    title: "Danger Tracker",
+    collaborators: "Evan Teboul, Aymane-Arfaoui Arfaoui, and Vignesh Guruswami",
+    description: "A project for SFHacks 2024 to help monitor and report dangerous incidents in real time, enhancing community safety.",
+    imageUrl: "../assets/images/dan_tracker.jpg",
+    devpost: "https://devpost.com/software/danger-tracker",
+    github: "https://github.com/M-a-a-d-man/SFHacks2024"
+  }
+];
 
-    projectDiv.innerHTML = `
-      <div class="project-image">
-        <img src="${project.imageUrl}" alt="${project.title}">
-      </div>
-      <div class="project-details">
-        <h3>${project.title}</h3>
-        <p><strong>Collaborators:</strong> ${project.collaborators}</p>
-        <p>${project.description}</p>
-        <a href="${project.devpost}" target="_blank">DevPost</a> |
-        <a href="${project.github}" target="_blank">GitHub</a>
-        ${project.presentation ? `| <a href="${project.presentation}" target="_blank">Presentation</a>` : ""}
-      </div>
-    `;
-    projectList.appendChild(projectDiv);
-  });
+// Populate the current projects section
+const currentProjectList = document.getElementById("current-project-list");
+currentProjects.forEach(project => {
+  const projectDiv = document.createElement("div");
+  projectDiv.classList.add("project");
 
-    // Sample publications data
-  const publications = [
-    {
-      title: "Title of Publication 1",
-      authors: "Author Names",
-      link: "https://example.com/publication1",
-      journal: "Journal Name",
-      year: "2024"
-    },
-    {
-      title: "Title of Publication 2",
-      authors: "Author Names",
-      link: "https://example.com/publication2",
-      journal: "Journal Name",
-      year: "2023"
-    }
-  ];
+  projectDiv.innerHTML = `
+    <div class="project-image">
+      <img src="${project.imageUrl}" alt="${project.title}">
+    </div>
+    <div class="project-details">
+      <h3>${project.title}</h3>
+      <p><strong>Collaborators:</strong> ${project.collaborators}</p>
+      <p>${project.description}</p>
+      <a href="${project.github}" target="_blank">GitHub</a>
+      ${project.presentation ? `| <a href="${project.presentation}" target="_blank">Presentation</a>` : ""}
+    </div>
+  `;
+  currentProjectList.appendChild(projectDiv);
+});
+
+// Populate the old projects section
+const oldProjectList = document.getElementById("old-project-list");
+oldProjects.forEach(project => {
+  const projectDiv = document.createElement("div");
+  projectDiv.classList.add("project");
+
+  projectDiv.innerHTML = `
+    <div class="project-image">
+      <img src="${project.imageUrl}" alt="${project.title}">
+    </div>
+    <div class="project-details">
+      <h3>${project.title}</h3>
+      <p><strong>Collaborators:</strong> ${project.collaborators}</p>
+      <p>${project.description}</p>
+      <a href="${project.devpost}" target="_blank">DevPost</a> |
+      <a href="${project.github}" target="_blank">GitHub</a>
+      ${project.presentation ? `| <a href="${project.presentation}" target="_blank">Presentation</a>` : ""}
+    </div>
+  `;
+  oldProjectList.appendChild(projectDiv);
+});
 
   // Populate the publications section
   const publicationsList = document.getElementById("publications-list");
@@ -231,10 +272,10 @@ layout: default
   });
 
   // Awards Data (Commented Out)
-  /*
+  
   const awards = [
-    { title: "Best Hack at XYZ Hackathon", year: "2024" },
-    { title: "Outstanding Research Award", year: "2023" },
+    { title: "Phi Beta Kappa Key", year: "2024" }
+    { title: "Best Hack at SFHacks2024", year: "2024" },
   ];
 
   const awardsList = document.getElementById("awards-list");

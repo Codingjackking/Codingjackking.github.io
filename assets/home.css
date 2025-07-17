@@ -1,0 +1,117 @@
+/* Container layout */
+.container {
+  display: flex;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 250px;
+  position: sticky;
+  top: 20px;
+  padding: 20px;
+  /* background-color: #f7f7f7; */
+  border-right: 1px solid #e8e8e8;
+  height: 100vh;
+}
+
+.headshot {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.headshot-image {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.sidebar-content p {
+  margin: 10px 0;
+}
+
+.svg-icon {
+  width: 20px;
+  height: 20px;
+  fill: #333;
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.sidebar-content a {
+  display: flex;
+  align-items: center;
+  color: #2a7ae2;
+  text-decoration: none;
+}
+
+.sidebar-content a:hover {
+  color: #1756a9;
+}
+
+.sidebar-content a:hover .svg-icon {
+  fill: #1756a9;
+}
+
+/* Main content styling */
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+#about-me,
+#news,
+#projects {
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+#news ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#news li {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* .project {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.project-image img {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.project-details h3 {
+  margin-top: 0;
+} */
+
+.project {
+  display: flex;
+  align-items: center; /* Vertically centers the image with the project details */
+  margin-bottom: 20px;
+}
+
+.project-image {
+  width: 150px; /* Set a fixed width for all images */
+  height: 150px; /* Set a fixed height for all images */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px; /* Optional: Adds rounded corners to images */
+  margin-right: 20px;
+}
+
+.project-image img {
+  width: 100%; /* Scale the image to cover the container */
+  height: 100%; /* Ensures the image fills the container */
+  object-fit: cover; /* Ensures the image fills the area without distortion */
+}
+
+.project-details {
+  flex: 1;
+}

@@ -6,3 +6,4 @@ vendor
 Gemfile.lock
 .env
 _posts
+chat.txt

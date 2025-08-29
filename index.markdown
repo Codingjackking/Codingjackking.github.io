@@ -59,7 +59,7 @@ layout: default
     <!-- About Me Section -->
     <section id="about-me">
       <h2>About Me</h2>
-      <p>I'm a 1st year master candidate at <a href="https://sjsu.edu" target="_blank"> San Jose State University</a>, aspiring to apply to Ph.D. programs. My interests are in artificial intelligence, data science, healthcare, education, and frontend development. I am a Cal Bridge Scholar.</p> <p>During the summer of 2024, I had the opportunity to work under Dr. Yu Zhang, an Assistant Professor in Electrical and Computer Engineering. This experience was invaluable, as it allowed me to immerse myself in the field of data analysis and machine learning, specifically focusing on <a href="https://docs.google.com/presentation/d/16D892MRAqM3MTbQpsdQFwY0wZFAPFKzs47PcMVS2vh4/edit?usp=sharing" target="_blank">load forecasting</a>.</p>
+      <p>I'm a 1st year master candidate at <a href="https://sjsu.edu" target="_blank"> San Jose State University</a>, aspiring to apply to Ph.D. programs. My interests are in artificial intelligence, data science, healthcare, education, and frontend development. I am a Cal Bridge Scholar and a member of the prestigious Phi Beta Kappa. </p> <p> During the summer of 2025, I worked with a amazing labs under Dr. Marti Hearst and her first year P.h.D. student Jasmine Shih. I had the pleasure of using Large Language Models like Gemini and ChatGPT to explore <a href="https://docs.google.com/presentation/d/1bU3xe6_hLMNiUrq-qHdxUTDrM6_bi_rPq5mPyJ8OvEs/edit?usp=sharing" target="_blank"> data visualization </a>.</p>  <p> Summer of 2024, I had the opportunity to work under Dr. Yu Zhang, an Assistant Professor in Electrical and Computer Engineering. This experience was invaluable, as it allowed me to immerse myself in the field of data analysis and machine learning, specifically focusing on <a href="https://docs.google.com/presentation/d/16D892MRAqM3MTbQpsdQFwY0wZFAPFKzs47PcMVS2vh4/edit?usp=sharing" target="_blank">load forecasting</a>.</p>
       <p>I think that Artificial Intelligence is the future, whether it be through robotics, data processing, or autonomous cars. AI has the potential to transform nearly every industry, from enhancing operational efficiency to creating entirely new ways for humans to interact with technology. My interest is in the application of AI in healthcare, where it can revolutionize diagnostics, personalize treatment plans, and improve patient outcomes. I am particularly fascinated by how machine learning algorithms can help identify patterns in complex medical data, leading to early detection of diseases and more accurate prognoses. In the long run, I believe that AI-driven healthcare solutions will not only save lives but also make healthcare more accessible and affordable for everyone.
       </p>
     </section>
@@ -104,19 +104,17 @@ layout: default
   </section>
 
    <!-- Dynamic Awards Section (Commented Out) -->
-<!--
   <section id="awards">
     <h2>Awards</h2>
     <ul id="awards-list">
-      // Uncomment and add awards data dynamically here if needed
+      <!-- Uncomment and add awards data dynamically here if needed-->
     </ul>
   </section>
--->
   <!-- Dynamic Publications Section
   <section id="publications">
     <h2>Publications</h2>
     <ul id="publications-list">
-      <!-- Publications data will be dynamically inserted here 
+      <!-- Publications data will be dynamically inserted here
     </ul>
   </section> -->
 
@@ -136,22 +134,23 @@ layout: default
 <script>
   // Sample news data
   const news = [
-    { date: "2025-7-1", content: "Started my 8 weeks research internship at UC Berkeley" },
+
+    { date: "2025-8-5", content: "Started my SJSU computer science master program" },
+    { date: "2025-7-1", content: "Started my 8 weeks research internship at UC Berkeley under Dr. Marti Hearst" },
     { date: "2025-6-23", content: "Received SFSU official digital diploma" },
     { date: "2025-5-23", content: "Attended San Francisco State University Commencement" },
     { date: "2025-4-30", content: "Accepted into San Jose State University Computer Science Master Program with specialization in Artifical Intelligence." },
-    { date: "2025-4-12", content: "Was invited into the prestigious Phi Beta Kappa Honor Society" },
     { date: "2025-5-08", content: "Inititated and took the Phi Beta Kappa Omicron Chapter oath with a cohort of 10+ other recipicent" },
     { date: "2025-4-12", content: "Was invited into the prestigious Phi Beta Kappa Honor Society" },
-    { date: "2025-2-7", content: "Started my independent study under Proessor Qun Wang with Dev Modi" },
+    { date: "2025-2-7", content: "Started my independent study under Professor Qun Wang with Dev Modi" },
     { date: "2024-10-20", content: "Attended a 3 days Cal Hacks 11.0, implementing hurricane tracker protype with a team of 2" },
     { date: "2024-9-14", content: "Presented at Cal Bridge 2024 Fall Conference Symporium" },
     { date: "2024-8-16", content: "Presented at UC Santa Cruz for Cal Bridge 2024 Summer Research Internship" },
-    { date: "2024-6-23", content: "Started my 8 weeks research internship at UC Santa Cruz" },
+    { date: "2024-6-23", content: "Started my 8 weeks research internship at UC Santa Cruz under Dr. Yu Zhang" },
     { date: "2024-10-15", content: "Attended a 48 hour UC Davis Hackathon, implementing a web app protype version for a Alzheimer Watch with a team of 3" },
     { date: "2024-4-7", content: "Won Best Use of Google Cloud in SFHacks 2024 with a team of 3, implementing a protype danger tracker" },
     { date: "2024-1-11", content: "Become a learning assistant for CSC215" },
-    { date: "2023-6-30", content: "Got accepted into Cal Bridge Program" },
+    { date: "2023-6-30", content: "Accepted into Cal Bridge Program" },
   ];
 
   // Sort news items by date (newest first)
@@ -171,8 +170,8 @@ layout: default
     title: "The Why in the Evolution of Data Visualizations on Wikipedia",
     collaborators: "Naing Htet, Jasmine Shih, PI: Dr. Marti Hearst",
     description: "Explored using Gemini and ChatGPT LLM to infer the intent behind wikipedia image edit using wikipedia revision commments",
-    imageUrl: "../assets/images/sucb2025.png", // Replace with the appropriate image
-    // github: "https://github.com/WikiVizEvolution/wiki-viz-edit-intents", // Update with the relevant link if available
+    imageUrl: "/assets/images/sucb2025.png", // Replace with the appropriate image
+    github: "https://github.com/WikiVizEvolution/wiki-viz-edit-intents", // Update with the relevant link if available
     // presentation: "https://example.com/presentation" // Update with the relevant link if available
   }
 ];
@@ -182,15 +181,15 @@ const oldProjects = [
     title: "Reinforcement Learning for Optimizing Multi-Vaccine Distribution",
     collaborators: "Naing Htet, Dev Modi, PI: Professor Qun Wang",
     description: "Implemented a framework that optimized covid-19 and flu distribution.",
-    imageUrl: "../assets/images/csc699.png", // Replace with the appropriate image
-    github: "https://github.com/Codingjackking/MultiVacSim", // Update with the relevant link if available
-    presentation: "https://docs.google.com/presentation/d/1oGpdoPimuHWwMQtScVbWzOm1hZcXs1GRn7JOxB7x9QU/edit?usp=sharing" // Update with the relevant link if available
+    imageUrl: "/assets/images/csc699.png",
+    github: "https://github.com/Codingjackking/MultiVacSim",
+    presentation: "https://docs.google.com/presentation/d/1oGpdoPimuHWwMQtScVbWzOm1hZcXs1GRn7JOxB7x9QU/edit?usp=sharing" 
   },
   {
     title: "Pre-Hurricane Alarm",
     collaborators: "Krushna Thakkar and Akshar Gothi",
     description: "Developed during Cal Hacks 11.0, this project serves as an early warning system for hurricanes, integrating real-time data for disaster preparedness.",
-    imageUrl: "../assets/images/hurr_tracker.jpg",
+    imageUrl: "/assets/images/hurr_tracker.jpg",
     devpost: "https://devpost.com/software/pre-hurricane-alarm",
     github: "https://github.com/kru2710shna/Pre_Hurricane"
   },
@@ -198,7 +197,7 @@ const oldProjects = [
     title: "Load Forecasting Models Comparison",
     collaborators: "Mentor: Yu Zhang",
     description: "A comparative analysis of load forecasting models using machine learning techniques.",
-    imageUrl: "../assets/images/lf_ml.png",
+    imageUrl: "/assets/images/lf_ml.png",
     github: "https://github.com/Codingjackking/ML-STLF",
     presentation: "https://docs.google.com/presentation/d/16D892MRAqM3MTbQpsdQFwY0wZFAPFKzs47PcMVS2vh4/edit?usp=sharing"
   },
@@ -206,15 +205,15 @@ const oldProjects = [
     title: "Anaphorna",
     collaborators: "Anmol Dhaka, Ahmed Yasser, and Awen Li",
     description: "Created for DavisHacks 2024, this project is designed to provide sustainable solutions for communities affected by environmental issues.",
-    imageUrl: "../assets/images/alz_watch.png",
+    imageUrl: "/assets/images/alz_watch.png",
     devpost: "https://devpost.com/software/anaphorna",
     github: "https://github.com/ahmedryasser/Anaphorna"
   },
   {
     title: "Danger Tracker",
     collaborators: "Evan Teboul, Aymane-Arfaoui Arfaoui, and Vignesh Guruswami",
-    description: "A project for SFHacks 2024 to help monitor and report dangerous incidents in real time, enhancing community safety.",
-    imageUrl: "../assets/images/dan_tracker.jpg",
+    description: "A project for SFHacks 2024 to help monitor and report dangerous incidents in real time, enhancing community safety",
+    imageUrl: "/assets/images/dan_tracker.jpg",
     devpost: "https://devpost.com/software/danger-tracker",
     github: "https://github.com/M-a-a-d-man/SFHacks2024"
   }
@@ -264,17 +263,17 @@ oldProjects.forEach(project => {
 });
 
   // Populate the publications section
-  const publicationsList = document.getElementById("publications-list");
-  publications.forEach(publication => {
-    const li = document.createElement("li");
-    li.innerHTML = `<a href="${publication.link}" target="_blank"><strong>${publication.title}</strong></a> - ${publication.authors} (${publication.year}), ${publication.journal}`;
-    publicationsList.appendChild(li);
-  });
-
+  // const publicationsList = document.getElementById("publications-list");
+  // publications.forEach(publication => {
+  //   const li = document.createElement("li");
+  //   li.innerHTML = `<a href="${publication.link}" target="_blank"><strong>${publication.title}</strong></a> - ${publication.authors} (${publication.year}), ${publication.journal}`;
+  //   publicationsList.appendChild(li);
+  // });
   // Awards Data (Commented Out)
   
   const awards = [
-    { title: "Phi Beta Kappa Key", year: "2024" }
+    { title: "San Francisco State University Diploma", year: "2025" },
+    { title: "Phi Beta Kappa Key", year: "2025" },
     { title: "Best Hack at SFHacks2024", year: "2024" },
   ];
 
@@ -284,5 +283,4 @@ oldProjects.forEach(project => {
     li.textContent = `${award.year}: ${award.title}`;
     awardsList.appendChild(li);
   });
-  */
 </script>

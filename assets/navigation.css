@@ -1,0 +1,468 @@
+/* ====================================
+   NAVIGATION & HEADER STYLES
+   ==================================== */
+
+/* HCI Principle: Fixed header for easy navigation access */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
+}
+
+/* HCI Principle: Visual feedback on scroll */
+.site-header.scrolled {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-nav {
+  width: 100%;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+/* Logo Section */
+.site-logo {
+  flex-shrink: 0;
+}
+
+.logo-link {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #24292e;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* HCI Principle: Clear hover states for all interactive elements */
+.logo-link:hover {
+  color: #0366d6;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 18px 16px;
+  color: #24292e;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+}
+
+/* HCI Principle: Clear visual feedback on hover and active states */
+.nav-link:hover,
+.nav-link.active {
+  color: #0366d6;
+  background-color: rgba(3, 102, 214, 0.05);
+}
+
+.nav-link.active {
+  border-bottom-color: #0366d6;
+}
+
+.dropdown-arrow {
+  margin-left: 4px;
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+}
+
+/* HCI Principle: Smooth transitions for better user experience */
+.has-dropdown.active .dropdown-menu,
+.has-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.has-dropdown.active .dropdown-arrow,
+.has-dropdown:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: #24292e;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba(3, 102, 214, 0.08);
+  color: #0366d6;
+}
+
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+
+/* HCI Principle: Accessible hamburger menu with clear affordances */
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: #24292e;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+.mobile-menu-toggle.active .hamburger:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.mobile-menu-toggle.active .hamburger:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active .hamburger:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Adjust body padding to account for fixed header */
+body {
+  padding-top: 60px;
+}
+
+/* ====================================
+   FOOTER STYLES
+   ==================================== */
+
+.site-footer {
+  background-color: #24292e;
+  color: #d1d5da;
+  margin-top: 80px;
+  padding: 60px 0 20px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #d1d5da;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: inline-block;
+}
+
+/* HCI Principle: Clear hover states for accessibility */
+.footer-links a:hover {
+  color: #58a6ff;
+}
+
+.footer-text {
+  color: #8b949e;
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+.footer-text a {
+  color: #58a6ff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-text a:hover {
+  color: #79c0ff;
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  margin-top: 16px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #30363d;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #8b949e;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ====================================
+   RESPONSIVE DESIGN (MOBILE-FIRST)
+   ==================================== */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e1e4e8;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  /* HCI Principle: Smooth animations for better UX */
+  .nav-menu.active {
+    max-height: calc(100vh - 60px);
+    opacity: 1;
+    overflow-y: auto;
+  }
+
+  .nav-item {
+    border-bottom: 1px solid #e1e4e8;
+  }
+
+  .nav-link {
+    padding: 16px 20px;
+    border-bottom: none;
+  }
+
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    border: none;
+    box-shadow: none;
+    background-color: #f6f8fa;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .has-dropdown.active .dropdown-menu {
+    max-height: 300px;
+  }
+
+  .dropdown-menu a {
+    padding: 12px 20px 12px 40px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 16px;
+  }
+
+  .logo-link {
+    font-size: 1.3rem;
+  }
+
+  .site-footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer-content {
+    padding: 0 16px;
+  }
+}
+
+/* ====================================
+   ACCESSIBILITY ENHANCEMENTS
+   ==================================== */
+
+/* HCI Principle: Clear focus states for keyboard navigation */
+.nav-link:focus,
+.dropdown-menu a:focus,
+.footer-links a:focus {
+  outline: 2px solid #0366d6;
+  outline-offset: 2px;
+}
+
+.mobile-menu-toggle:focus {
+  outline: 2px solid #0366d6;
+  outline-offset: 4px;
+}
+
+/* HCI Principle: Skip to main content link for screen readers */
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: #0366d6;
+  color: white;
+  text-decoration: none;
+}
+
+.skip-to-main:focus {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
+}
+
+/* ====================================
+   SMOOTH SCROLLING
+   ==================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Offset for fixed header when using anchor links */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* ====================================
+   ADDITIONAL HCI ENHANCEMENTS
+   ==================================== */
+
+/* HCI Principle: High contrast for readability */
+@media (prefers-contrast: high) {
+  .nav-link,
+  .logo-link {
+    color: #000000;
+  }
+
+  .nav-link:hover,
+  .logo-link:hover {
+    color: #0366d6;
+    background-color: #e1e4e8;
+  }
+}
+
+/* HCI Principle: Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Dark mode support (if needed in future) */
+@media (prefers-color-scheme: dark) {
+  /* Uncomment to enable dark mode
+  .site-header {
+    background-color: #0d1117;
+    border-bottom-color: #30363d;
+  }
+
+  .logo-link,
+  .nav-link {
+    color: #c9d1d9;
+  }
+
+  .nav-link:hover {
+    color: #58a6ff;
+    background-color: rgba(88, 166, 255, 0.1);
+  }
+
+  .dropdown-menu {
+    background-color: #161b22;
+    border-color: #30363d;
+  }
+
+  .dropdown-menu a {
+    color: #c9d1d9;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: rgba(88, 166, 255, 0.1);
+    color: #58a6ff;
+  }
+  */
+}

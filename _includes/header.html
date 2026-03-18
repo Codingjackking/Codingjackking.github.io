@@ -1,0 +1,78 @@
+<!-- Navigation Header -->
+<header class="site-header">
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="site-logo">
+        <a href="{{ '/' | relative_url }}" class="logo-link"
+          >{{ site.title }}</a
+        >
+      </div>
+
+      <button
+        class="mobile-menu-toggle"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+      >
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav-menu" role="menubar">
+        <li class="nav-item has-dropdown" role="none">
+          <a
+            href="{{ '/' | relative_url }}"
+            class="nav-link"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            About Me
+            <span class="dropdown-arrow">▼</span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li role="none">
+              <a href="{{ '/mentoring' | relative_url }}" role="menuitem"
+                >Mentoring</a
+              >
+            </li>
+            <li role="none">
+              <a href="{{ '/miscellaneous' | relative_url }}" role="menuitem"
+                >Miscellaneous</a
+              >
+            </li>
+            <li role="none">
+              <a href="{{ '/awards' | relative_url }}" role="menuitem"
+                >Achievements & Awards</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <!-- Uncomment when you have publications
+        <li class="nav-item" role="none">
+          <a href="{{ '/publications' | relative_url }}" class="nav-link" role="menuitem">Publications</a>
+        </li>
+        -->
+
+        <li class="nav-item" role="none">
+          <a
+            href="{{ '/projects' | relative_url }}"
+            class="nav-link"
+            role="menuitem"
+            >Projects</a
+          >
+        </li>
+
+        <li class="nav-item" role="none">
+          <a
+            href="{{ '/news' | relative_url }}"
+            class="nav-link"
+            role="menuitem"
+            >News</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

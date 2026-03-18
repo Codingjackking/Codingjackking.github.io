@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}" />
+
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/style.css' | relative_url }}"
+    />
+    <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}" />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/navigation.css' | relative_url }}"
+    />
+  </head>
+
+  <body>
+    {% include header.html %}
+
+    <div class="container-lg px-3 my-5 markdown-body">{{ content }}</div>
+
+    {% include footer.html %}
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
+      integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg="
+      crossorigin="anonymous"
+    ></script>
+    {% include navigation-script.html %}
+
+    <script src="https://cdn.jsdelivr.net/npm/contact-guard/dist/contact-guard.umd.js"></script>
+    <script>
+      ContactGuard.init({ xorKey: "sjsu_ai_2025" });
+    </script>
+  </body>
+</html>
